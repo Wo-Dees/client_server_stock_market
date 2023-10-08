@@ -12,7 +12,7 @@ void Server::Acync_accept() {
 
     acceptor_.async_accept(*socket_, [&](std::error_code error){
         auto client = std::make_shared<Session>(std::move(*socket));
-        
+        client->Start();
         Acync_accept();
     });
 }

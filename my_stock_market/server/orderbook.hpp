@@ -2,12 +2,14 @@
 
 #include <order.hpp>
 
-#include <set>
+#include <vector>
+#include <queue>
 
 class OrderBook {
 public:
-    Order Match(Order order);
+    OrderBook() = default;
+    std::vector<Order> Match(Order& order);
 private:
-    std::set<Order> buy_;
-    std::set<Order> sale_;
+    std::priority_queue<Order> buy_;
+    std::priority_queue<Order> sale_;
 };

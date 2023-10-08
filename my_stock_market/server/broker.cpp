@@ -5,5 +5,7 @@ void Broker::Push(const Order& order) {
 }
 
 bool Broker::Pop(Order& order) {
-    return quque_.pop(order);
+    bool exe = quque_.pop(order);
+    order.time_point = ++time_point_;
+    return exe;
 }
