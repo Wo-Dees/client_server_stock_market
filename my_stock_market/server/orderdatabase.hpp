@@ -1,10 +1,11 @@
 #pragma once 
 
-#include "order_pool.hpp"
+#include <order.hpp>
 
 class DataBase {
 public:
-    void Push(Answer);
+    DataBase() {}
+    void Push(Order order);
 private:
 
 };

@@ -14,6 +14,6 @@ public:
 
 private:
     std::size_t id_;
-    std::size_t number_;
+    double cost_;
     std::size_t volume_;
 };

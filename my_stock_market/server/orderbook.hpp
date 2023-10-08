@@ -1,19 +1,12 @@
 #pragma once
 
-#include "order.hpp"
+#include <order.hpp>
 
 #include <set>
 
-class Answer {
+class OrderBook {
 public:
-
-private:
-
-};
-
-class OrderPool {
-public:
-    Answer ProcessOrder(Order order);
+    Order Match(Order order);
 private:
     std::set<Order> buy_;
     std::set<Order> sale_;

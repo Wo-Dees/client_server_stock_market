@@ -9,6 +9,7 @@ Assistant::Assistant(std::ostream& os, std::istream& is, std::pair<std::string, 
 void Assistant::Greeting() {
     output_ << "Hi, I am Clippy, your personal assistant." << std::endl;
 }
+
 void Assistant::Authorization() {
     output_ << "Do you want to register or log in?" << std::endl;
     std::string name, password, request;
@@ -29,6 +30,27 @@ void Assistant::Authorization() {
 }
 
 int Assistant::RunContextMenu() {
+    output_ << "What would you like to do?" << std::endl;
+    std::string request;
+    while (true) {
+        if (request == "balance") {
+
+        } else if (request == "active orders") {
+
+        } else if (request == "completed transactions") {
+
+        } else if (request == "quotes") {
+
+        } else if (request == "add order") {
+
+        } else if (request == "cancel order") {
+
+        } else if (request == "logout") {
+            break;
+        } else {
+            output_ << "Don't correct query, try again." << std::endl;
+        }
+    }
     return 0;
 }
 
