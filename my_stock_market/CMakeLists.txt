@@ -1,0 +1,2 @@
+include_directories(client)
+include_directories(server)
