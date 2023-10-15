@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.2)
+
+project(trading)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror")
+
+find_package(Boost 1.40 COMPONENTS system REQUIRED)
+find_package(Threads REQUIRED)
+
+include_directories(${Boost_INCLUDE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
+add_executable(play_trading main.cpp)
+target_link_libraries(play_trading PRIVATE Threads::Threads ${Boost_LIBRARIES})
